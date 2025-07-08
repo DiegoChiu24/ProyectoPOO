@@ -37,5 +37,26 @@ public class Eleccion {
         this.listCandidatos = listCandidatos;
     }
     
+    public int getCantcandidatos() {
+        return cantcandidatos;
+    }
+
+    public void setCantcandidatos(int cantcandidatos) {
+        this.cantcandidatos = cantcandidatos;
+    }
     
+    
+    
+    public boolean Añadircandidato(Candidato pepe){
+        if(cantcandidatos <= listCandidatos.length){
+            listCandidatos[cantcandidatos] = pepe;
+            cantcandidatos++;
+            return true;
+            }
+        return false;
+    }
+
+    public int NumCandidatos() {
+        return cantcandidatos;
+    }
 }
