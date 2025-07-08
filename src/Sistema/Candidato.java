@@ -32,6 +32,10 @@ public class Candidato extends Persona{
         this.numeroDNI = numeroDNI;
     }
     
+    @Override
+    public String toString() {
+        return nombres + " " + apellidos;
+    }
     
     
 }
