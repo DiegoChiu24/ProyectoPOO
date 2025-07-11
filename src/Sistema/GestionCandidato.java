@@ -18,7 +18,6 @@ public class GestionCandidato {
         this.cantidadRegistrada = 0;
     }
 
-    // Agregar un nuevo candidato
     public boolean registrarCandidato(Candidato nuevoCandidato) {
         if (cantidadRegistrada < listaCandidatos.length) {
             listaCandidatos[cantidadRegistrada] = nuevoCandidato;
@@ -28,7 +27,6 @@ public class GestionCandidato {
         return false;
     }
 
-    // Modificar candidato en un índice específico
     public boolean modificarCandidato(int indice, Candidato candidatoActualizado) {
         if (indice >= 0 && indice < cantidadRegistrada) {
             listaCandidatos[indice] = candidatoActualizado;
@@ -37,7 +35,6 @@ public class GestionCandidato {
         return false;
     }
 
-    // Eliminar candidato en un índice específico
     public boolean eliminarCandidato(int indice) {
         if (indice >= 0 && indice < cantidadRegistrada) {
             for (int i = indice; i < cantidadRegistrada - 1; i++) {
@@ -50,7 +47,6 @@ public class GestionCandidato {
         return false;
     }
 
-    // Obtener copia de candidatos registrados
     public Candidato[] obtenerCandidatos() {
         Candidato[] copia = new Candidato[cantidadRegistrada];
         for (int i = 0; i < cantidadRegistrada; i++) {
